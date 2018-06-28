@@ -40,6 +40,6 @@ end
 
 s = Song.new("Fireflies", "Owl City", "Electronic")
 s2 = Song.new('Hello Seattle', 'Owl City', 'Electronic')
-puts Song.artists
-puts Song.genres
+puts Song.artist_count
+puts Song.genre_count
 puts Song.count
