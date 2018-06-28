@@ -1,8 +1,8 @@
 class Song
 
   @@count = 0
-  @@genres = {}
-  @@artists = {}
+  @@genres = []
+  @@artists = []
 
   attr_accessor :name, :artist, :genre
 
@@ -11,28 +11,36 @@ class Song
     @artist = artist
     @genre = genre
     @@count += 1
-    @@genres.keys.include?(genre) ? @@genres[genre] += 1 : @@genres[genre] = 1
-    @@artists.keys.include?(artist) ? @@artists[artist] += 1 : @@artists[artist] = 1
+    @@artists << artist
+    @@genres << genre
   end
 
   def self.genres
-    @@genres.keys
+    genre_count.keys
   end
 
   def self.artists
-    @@artists.keys
+    artist_count.keys
   end
 
   def self.genre_count
-    @@genres
+    typeCount(@@genres)
+  end
+
+  def self.typeCount(type)
+    hash = {}
+    type.each do |g|
+      hash.keys.include?(g) ? hash[g] += 1 : hash[g] = 1
+    end
+    hash
   end
 
   def self.artist_count
-    @@artists
+    typeCount(@@artist)
   end
 
   def self.count
-    @@count
+    @@count.keys
   end
 
 end
