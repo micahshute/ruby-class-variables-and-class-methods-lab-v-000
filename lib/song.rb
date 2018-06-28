@@ -1,5 +1,5 @@
 class Song
-  
+
   @@count = 0
   @@genres = {}
   @@artists = {}
@@ -12,7 +12,7 @@ class Song
     @genre = genre
     @@count += 1
     @@genres.keys.include?(genre) ? @@genres[genre] += 1 : @@genres[genre] = 1
-    @@artists.keys.include?(artist) ? @@artists[artist] += 1 : @@artist[artist] = 1
+    @@artists.keys.include?(artist) ? @@artists[artist] += 1 : @@artists[artist] = 1
   end
 
   def self.genres
@@ -30,5 +30,5 @@ class Song
   def self.artist_count
     @@artists
   end
-  
+
 end
