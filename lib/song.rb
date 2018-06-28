@@ -32,3 +32,8 @@ class Song
   end
 
 end
+
+
+s = Song.new("Fireflies", "Owl City", "Electronic")
+puts Song.artists
+puts Song.genres
