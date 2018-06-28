@@ -39,7 +39,7 @@ end
 
 
 s = Song.new("Fireflies", "Owl City", "Electronic")
-s2 = Sont.new('Hello Seattle', 'Owl City', 'Electronic')
+s2 = Song.new('Hello Seattle', 'Owl City', 'Electronic')
 puts Song.artists
 puts Song.genres
 puts Song.count
