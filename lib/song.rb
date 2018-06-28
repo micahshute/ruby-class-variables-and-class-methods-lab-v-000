@@ -31,9 +31,14 @@ class Song
     @@artists
   end
 
+  def self.count
+    @@count
+  end
+
 end
 
 
 s = Song.new("Fireflies", "Owl City", "Electronic")
 puts Song.artists
 puts Song.genres
+puts Song.count
